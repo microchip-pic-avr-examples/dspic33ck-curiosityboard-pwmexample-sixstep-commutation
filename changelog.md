@@ -1,4 +1,4 @@
-# dspic33ck-curiosityboard-pwmexample-sixstep-commutation v1.00
+# dspic33ck-curiosityboard-pwmexample-sixstep-commutation v1.0.0
 ### Release Highlights
 
 
