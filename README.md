@@ -91,11 +91,11 @@ To clone or download this application firmware on GitHub,
 
 1. Start **MPLAB X IDE** and open the project **pwm_schemes.X (File > Open Project)** with device selection **dsPIC33CK256MP508.**  
     <p align="left">
-       <img  src="images/idedeviceselection.png"></p>
+       <img  src="images/idedeviceselection.PNG"></p>
   
 2. Set the project **pwm_schemes.X** as the main project by right-clicking on the project name and selecting **Set as Main Project** as shown. The project **pwm_schemes.X** will then appear in **bold.**
     <p align="left">
-     <img  src="images/ideprojectsetup.png"></p>
+     <img  src="images/ideprojectsetup.PNG"></p>
 
 3. Right-click on the project **pwm_schemes.X** and select **Properties** to open its **Project Properties** Dialog. Click the **Conf:[default]** category to reveal the general project configuration information. The development tools used for testing the firmware are listed in section [2.2 Software Tools Used for Testing the firmware.](#22-software-tools-used-for-testing-the-firmware).
 
@@ -110,30 +110,30 @@ To clone or download this application firmware on GitHub,
      Please ensure that the selected MPLAB® XC16 Compiler and Device Pack support the device configured in the firmware
 
      <p align="left">
-     <img  src="images/projectpropertiessettings.png"></p>
+     <img  src="images/projectpropertiessettings.PNG"></p>
 
-5. Ensure that the checkbox **Load symbols when programming or building for production (slows process)** is checked under the **Loading** category of the **Project Properties** window.       
+4. Ensure that the checkbox **Load symbols when programming or building for production (slows process)** is checked under the **Loading** category of the **Project Properties** window.       
         
       <p align="left">
-      <img  src="images/loadvariables.png"></p>
+      <img  src="images/loadvariables.PNG"></p>
 
-6. To build the project (in this case, **pwm_schemes.X**) and program the device dsPIC33CK256MP508, click **Make and Program Device Main project** on the toolbar
+5. To build the project (in this case, **pwm_schemes.X**) and program the device dsPIC33CK256MP508, click **Make and Program Device Main project** on the toolbar
     <p align="left">
-    <img  src="images/deviceprogramming.png"></p>
+    <img  src="images/deviceprogramming.PNG"></p>
 
-7.	<p style='text-align: justify;'> Press the push button <b>SW1</b> to enable 'PWM Swithing Scheme 1' and 'RED LED' is turned ON to indicate it. Press the push button SW1 again to disable the PWMs.
+6.	<p style='text-align: justify;'> Press the push button <b>SW1</b> to enable 'PWM Swithing Scheme 1' and 'RED LED' is turned ON to indicate it. Press the push button SW1 again to disable the PWMs.
 
     <p align="left">
       <img  src="images/dem8.png"></p> 
     </p>
 
-9.	<p style='text-align: justify;'> Press the push button <b>SW1</b> to enable 'PWM Swithing Scheme 2' and 'GREEN LED' is turned ON to indicate it. Press the push button SW1 again to disable the PWMs.
+7.	<p style='text-align: justify;'> Press the push button <b>SW1</b> to enable 'PWM Swithing Scheme 2' and 'GREEN LED' is turned ON to indicate it. Press the push button SW1 again to disable the PWMs.
 
     <p align="left">
       <img  src="images/dem9.png"></p>
     </p>
 
-10.	<p style='text-align: justify;'> Press the push button <b>SW1</b> to enable 'PWM Swithing Scheme 3' and 'BLUE LED' is turned ON to indicate it. Press the push button SW1 again to disable the PWMs.
+8.	<p style='text-align: justify;'> Press the push button <b>SW1</b> to enable 'PWM Swithing Scheme 3' and 'BLUE LED' is turned ON to indicate it. Press the push button SW1 again to disable the PWMs.
 
     <p align="left">
       <img  src="images/dem10.png"></p>
