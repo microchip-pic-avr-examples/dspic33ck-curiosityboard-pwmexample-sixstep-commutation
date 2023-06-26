@@ -1,7 +1,7 @@
 ![image](images/microchip.jpg) 
 
 # PWM Peripheral Example: 
-# Six-Step Commutation PWM Switching Schemes for BLDC Motor using dsPIC33CK Curiosity Board and MATLAB SIMULINK
+# Six-Step Commutation PWM Switching Schemes for BLDC Motor using dsPIC33CK Curiosity Board
 
 ## 1. INTRODUCTION
 This document describes implementation of three popular PWM switching schemes used for the Six-step commutation of BLDC motor. The examples are implemented on the dsPIC33CK curiosity development board and demonstrates the Override and Swap features of the High Resolution PWM module in the dsPIC33CK Digital Signal Controllers.
@@ -52,19 +52,15 @@ Configuration Summary:
 - Dead time is applied to the Complementary PWM Signal
 
 ## 2.	SUGGESTED DEMONSTRATION REQUIREMENTS
-### 2.1 MATLAB Model Required for the Demonstration
--  MATLAB model can be cloned or downloaded as zip file from the Github repository ([link](https://github.com/microchip-pic-avr-solutions/matlab-dspic33ck-curiosityboard-pwmexample-sixstep-commutation)).
+### 2.1 Application Example Firmware Required for the Demonstration
+To clone or download this application firmware on GitHub, 
+- Navigate to the [main page of this repository](https://github.com/microchip-pic-avr-examples/dspic33ck-curiosityboard-pwmexample-sixstep-commutation) and 
+- On the tab **<> Code**, above the list of files in the right-hand corner, click Code, then from the menu, click **Download ZIP** or copy the repository URL to **clone.**
 
-### 2.2	Software Tools Used for Testing the MATLAB/Simulink Model
-1.	MPLAB X IDE and IPE (v6.00)
-2.	XC16 compiler (v2.00)
-3.	MATLAB R2023a
-4.	Required MATLAB add-on packages
-    -	Simulink
-    -	Simulink Coder
-    -	MATLAB Coder
-    -	Embedded Coder (v7.9)
-    -	MPLAB Device blocks for Simulink (v3.50.35)
+### 2.2	Software Tools Used for Testing the firmware
+- MPLAB® X IDE **v6.10** 
+- DFP: **dsPIC33CK-MP_DFP v1.11.346**
+- MPLAB® XC16 Compiler **v2.00**
 
 > **_NOTE:_**
 >The software used for testing the model during release is listed above. It is recommended to use the version listed above or later versions for building the model.
@@ -93,39 +89,39 @@ Configuration Summary:
 ## 4.	BASIC DEMONSTRATION
 <p style='text-align: justify;'> Follow the instructions step-by-step, to set up and run the demo example:</p>
 
-1. Launch MATLAB (refer the section [“2.2 Sofware Tools Used for Testing the MATLAB/Simulink Model"](#22-software-tools-used-for-testing-the-matlabsimulink-model)).</p> 
-2. Open the folder downloaded from the repository, in which MATLAB files are saved (refer the section ["2.1 MATLAB Model Required for the Demonstration"](#21-matlab-model-required-for-the-demonstration)).
-
-    <p align="left" >
-    <img  src="images/dem2.png"></p>
-
-3.	<p style='text-align: justify;'>Double click on the Simulink model.
-
+1. Start **MPLAB X IDE** and open the project **pwm_schemes.X (File > Open Project)** with device selection **dsPIC33CK256MP508.**  
     <p align="left">
-      <img  src="images/dem3.png"></p>
-    </p>
-    
-4.	<p style='text-align: justify;'>From this Simulink model an MPLAB X project can be generated. To generate the code from the Simulink model, go to the <b>"MICROCHIP"</b> tab, and enable the tabs shown in the figure below. 
-
+       <img  src="images/idedeviceselection.png"></p>
+  
+2. Set the project **pwm_schemes.X** as the main project by right-clicking on the project name and selecting **Set as Main Project** as shown. The project **pwm_schemes.X** will then appear in **bold.**
     <p align="left">
-      <img  src="images/dem4.png"></p>
-    </p>
+     <img  src="images/ideprojectsetup.png"></p>
 
-5.	<p style='text-align: justify;'>	To generate the code and program the dsPIC, click on <b>‘Build Model’ or ‘Clean Build Model’</b> option under the <b>“Microchip”</b> tab. This will generate the MPLAB X project from the Simulink model and program the dsPIC33CK256MP508 device.
+3. Right-click on the project **pwm_schemes.X** and select **Properties** to open its **Project Properties** Dialog. Click the **Conf:[default]** category to reveal the general project configuration information. The development tools used for testing the firmware are listed in section [2.2 Software Tools Used for Testing the firmware.](#22-software-tools-used-for-testing-the-firmware).
 
+     In the **Conf:[default]** category window: 
+     - Ensure the selected **Device** is **dsPIC33CK256MP508.**
+     - Select the **Connected Hardware Tool** to be used for programming and debugging. 
+     - Select the specific Device Family Pack (DFP) from the available list of **Packs.** In this case, **dsPIC33CK-MC_DFP 1.11.346** is selected. 
+     - Select the specific **Compiler Toolchain** from the available list of **XC16** compilers. 
+     In this case, **XC16(v2.00)** is selected.
+     - After selecting Hardware Tool and Compiler Toolchain, Device Pack, click the button **Apply**
+
+     Please ensure that the selected MPLAB® XC16 Compiler and Device Pack support the device configured in the firmware
+
+     <p align="left">
+     <img  src="images/projectpropertiessettings.png"></p>
+
+5. Ensure that the checkbox **Load symbols when programming or building for production (slows process)** is checked under the **Loading** category of the **Project Properties** window.       
+        
+      <p align="left">
+      <img  src="images/loadvariables.png"></p>
+
+6. To build the project (in this case, **pwm_schemes.X**) and program the device dsPIC33CK256MP508, click **Make and Program Device Main project** on the toolbar
     <p align="left">
-      <img  src="images/dem5.png"></p>
-    </p>
+    <img  src="images/deviceprogramming.png"></p>
 
-6.	<p style='text-align: justify;'>After completing the process, the <b>‘Operation Succeeded’</b> message will be displayed on the <b>‘Diagnostics Viewer’</b>.
-
-    <p align="left">
-      <img  src="images/dem6.png"></p>
-    </p>
-
-7.	<p style='text-align: justify;'>If the device is successfully programmed, <b>LED1 and LED2</b> will be blinking. 
-
-8.	<p style='text-align: justify;'> Press the push button <b>SW1</b> to enable 'PWM Swithing Scheme 1' and 'RED LED' is turned ON to indicate it. Press the push button SW1 again to disable the PWMs.
+7.	<p style='text-align: justify;'> Press the push button <b>SW1</b> to enable 'PWM Swithing Scheme 1' and 'RED LED' is turned ON to indicate it. Press the push button SW1 again to disable the PWMs.
 
     <p align="left">
       <img  src="images/dem8.png"></p> 
@@ -143,35 +139,7 @@ Configuration Summary:
       <img  src="images/dem10.png"></p>
     </p>
 
-
-##  5. ADDING C SOURCE FILE TO THE SIMULINK MODEL:
-The model incorporates a C source file, which has configurations required to implement various PWM switching schemes through override, swap and output mode features of the High Resolution PWM. Follow the steps below to add a C source file into the Simulink model.
-
-1. In the **Modelling** tab, click on the **Model Settings**.
-
-    <p align="left">
-      <img  src="images/code1.png"></p>
-    </p>
-
-2.	Expand the **Code Generation** tab and click on the **Custom Code**.
-
-    <p align="left">
-      <img  src="images/code2.png"></p>
-    </p>
-
-3.	In the **Include directories**, add the path of the C source file. If the C source file is in the same directory as the Simulink model, then give **“./”**.
-
-    <p align="left">
-      <img  src="images/code3.png"></p>
-    </p>
-
-4.	In the **Source files tab**, enter the C source file name which needs to be included. Then click **Apply**.
-
-    <p align="left">
-      <img  src="images/code4.png"></p>
-    </p>
-
-## 	6. REFERENCES:
+## 	5. REFERENCES:
 For more information, refer to the following documents or links.
 
 1. [dsPIC33CK256MP508 Family Datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/dsPIC33CK256MP508-Family-Data-Sheet-DS70005349H.pdf)
@@ -179,5 +147,3 @@ For more information, refer to the following documents or links.
 3. [dsPIC33CK Curiosity Development Board User’s Guide](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU16/ProductDocuments/UserGuides/dsPIC33CK-Curiosity-Development-Board-User%27s-Guide-DS50002859A.pdf)
 3.	[MPLAB® X IDE installation](https://microchipdeveloper.com/mplabx:installation)
 4.	[MPLAB® XC16 Compiler installation](https://microchipdeveloper.com/mplabx:installation)
-5.  [Motor Control Blockset](https://in.mathworks.com/help/mcb/)
-6.  [MPLAB Device Blocks for Simulink :dsPIC, PIC32 and SAM mcu](https://in.mathworks.com/matlabcentral/fileexchange/71892-mplab-device-blocks-for-simulink-dspic-pic32-and-sam-mcu)
