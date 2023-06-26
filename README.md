@@ -146,4 +146,4 @@ For more information, refer to the following documents or links.
 2. [dsPIC33/PIC24 High-Resolution PWM with Fine Edge Placement Family Reference Manual](http://ww1.microchip.com/downloads/en/DeviceDoc/dsPIC33-PIC24-FRM-High-Resolution-PWM-with-Fine-Edge-Placement-70005320b.pdf)
 3. [dsPIC33CK Curiosity Development Board User’s Guide](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU16/ProductDocuments/UserGuides/dsPIC33CK-Curiosity-Development-Board-User%27s-Guide-DS50002859A.pdf)
 3.	[MPLAB® X IDE installation](https://microchipdeveloper.com/mplabx:installation)
-4.	[MPLAB® XC16 Compiler installation](https://microchipdeveloper.com/mplabx:installation)
+4.	[MPLAB® XC16 Compiler installation](https://microchipdeveloper.com/xc16:installation)
