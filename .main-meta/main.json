@@ -36,8 +36,7 @@
       },
       "keywords":[
          "PWM",
-         "Motor Control",
-         "FOC"
+         "Motor Control"
       ]
    }
 }
