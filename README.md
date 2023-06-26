@@ -117,7 +117,7 @@ To clone or download this application firmware on GitHub,
       <p align="left">
       <img  src="images/loadvariables.png"></p>
 
-6. To build the project (in this case, **pwm_schemes.X**) and program the device dsPIC33CK64MC105, click **Make and Program Device Main project** on the toolbar
+6. To build the project (in this case, **pwm_schemes.X**) and program the device dsPIC33CK256MP508, click **Make and Program Device Main project** on the toolbar
     <p align="left">
     <img  src="images/deviceprogramming.png"></p>
 
