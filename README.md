@@ -21,6 +21,9 @@ Configuration Summary:
 - Master Period and Duty Cycle Used
 - Override State is drive low
 
+  <p align="left" >
+  <img  src="images/scheme1.png"></p>
+
 ### 1.2 PWM Switching Scheme 2
 In this PWM scheme, three switches are used to control the two active phases. In a given sector, one active phase is driven with a complementary PWM waveform and the other active phase has only its low side driven high at 100% duty cycle, as shown in figure below. Like Scheme 1, overrides are used to control the outputs in each sector.
 
@@ -36,6 +39,9 @@ Configuration Summary:
 - Override State is Dependent on Sector State
 - Dead time is applied to the Complementary PWM Signal
 
+  <p align="left" >
+  <img  src="images/scheme2.png"></p>
+
 ### 1.3 PWM Switching Scheme 3
 In this PWM scheme, four switches are driven in a given sector. Two pairs of complementary PWM outputs are applied to the two active phases. The inactive phase is overriden to low as needed, as shown below.
 
@@ -50,6 +56,9 @@ Configuration Summary:
 - Master Period and Duty Cycle Used
 - Override State is Dependent on Sector State
 - Dead time is applied to the Complementary PWM Signal
+
+  <p align="left" >
+  <img  src="images/scheme3.png"></p>
 
 ## 2.	SUGGESTED DEMONSTRATION REQUIREMENTS
 ### 2.1 Application Example Firmware Required for the Demonstration
